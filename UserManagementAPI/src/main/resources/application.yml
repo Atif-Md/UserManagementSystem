@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: UserManagementAPI
+#for data source
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///jrtp701
+    username: root
+    password: root
+
+#jpa-hibernate properties
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    username: mohammadatif0422000@gmail.com
+    password: awuepjdnjgokyyuu
+    properties:
+      mail:
+#        debug: true
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          auth: true
+          starttls:
+            enable: true
+            required: true
+server:
+  port: 4041
+
+mailbody:
+ registeruser:
+  location: src/main/java/com/atiff/service/user_registration_body.txt
+ recoverpwd:
+  location: src/main/java/com/atiff/service/recover_pwd_body.txt	
